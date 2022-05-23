@@ -1,9 +1,11 @@
-console.log('Pronto para começar!')
+const chalk = require("chalk");
 
-const paragrafo = 'Texto executado por função'
+console.log(chalk.blue("Pronto para começar!"));
 
-function Texto (texto) {
-  return(texto)
+const paragrafo = "Texto executado por função";
+
+function texto(string) {
+  return string;
 }
 
-console.log(Texto(paragrafo))
+console.log(texto(paragrafo));
