@@ -10,7 +10,7 @@ function getLinks(data){
     results.push({[temp[1]]: temp[2]})
   }
 
-  return results
+  return results.length === 0 ? 'nã há links' : results
 }
 
 function getError(err){
@@ -21,12 +21,10 @@ async function getFile(path){
   const encoding = 'utf-8'
   try{
     const data = await fs.promises.readFile(path, encoding)
-    console.log(getLinks(data))
+     return getLinks(data)
   } catch(err){
     getError(err)
   }
 }
-
-//getFile('./arquivos/texto1.md')
 
 module.exports = getFile
