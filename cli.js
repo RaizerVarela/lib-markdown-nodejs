@@ -7,7 +7,7 @@ const path = process.argv
 async function processData(path){
   const result = await getFile(path[2])
   if(path[3] === 'validate'){
-    console.log(chalk.yellow('links validados'), validateURL(result))
+    console.log(chalk.yellow('links validados'), await validateURL(result))
   } else {
     console.log(chalk.yellow('lista de links'), result)
   }
