@@ -10,7 +10,7 @@ function getLinks(data){
     results.push({[temp[1]]: temp[2]})
   }
 
-  return results.length === 0 ? 'nã há links' : results
+  return results.length === 0 ? 'não há links' : results
 }
 
 function getError(err){
